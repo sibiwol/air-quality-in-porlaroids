@@ -5,3 +5,47 @@
   font-weight: normal;
   font-style: normal;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Gomsin;
+  font-size: 24px;
+}
+
+body {
+  background-color: #c4c4c4;
+}
+
+.polaroid {
+  background-color: #ffffff;
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -300px;
+}
+
+.photo {
+  background-color: #c4c4c4;
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+
+.description {
+  width: 320px;
+  height: 200px;
+  position: absolute;
+  left: 40px;
+  top: 400px;
+  padding: 0 16px;
+}
+
+.content {
+  margin: 8px 0;
+}
