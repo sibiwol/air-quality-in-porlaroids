@@ -1,0 +1,28 @@
+{
+  "name": "air-quality-in-polaroids",
+  "description": "1. meta 태그는 보통 어떤 프로퍼티를 사용하는가 2. 파비콘은 이미지 파일 .png와 .ico의 차이 3. link 태그 안 type=\"image/x-icon\"의 이미. 꼭 있어야 하는가?",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sibiwol/air-quality-in-porlaroids.git"
+  },
+  "keywords": [
+    "airqulity"
+  ],
+  "author": "thinkerring",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sibiwol/air-quality-in-porlaroids/issues"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "cheerio": "^1.0.0-rc.10",
+    "proj4": "^2.7.5"
+  },
+  "homepage": "https://github.com/sibiwol/air-quality-in-porlaroids#readme"
+}
