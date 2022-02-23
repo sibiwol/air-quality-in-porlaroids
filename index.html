@@ -8,9 +8,32 @@
   <link rel="icon" type="image/x-icon" href="./images/polaroid-g39615198e_640-removebg-preview.png">
   <meta />
   <link rel="stylesheet" href="style.css">
+  
+  <!-- jQuery import   -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- <script async defer 
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa_Tf_ZN-064tR2_N9wzV6l5F-9B6lwz4&callback=initMap"></script> -->
   <script src="main.js" defer></script>
+  <script>
+        // 서울 대기 정보 가져오기 (기존 것 스크랩핑)
+        function showMiseInfo() {
+            $('#mise-info').empty();
+            $.ajax({
+                type: "GET",
+                url: "http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99",
+                data: {},
+                success: function (response) {
+                    let rows = response["RealtimeCityAir"]["row"];
+                    for (let i = 0; i < rows.length; i++) {
+                        let guName = rows[i]['MSRSTE_NM'];
+                        let guMise = rows[i]['PM10'];
+                        let tempHtml = `<li>${guName} : ${guMise}</li>`
+                        $('#mise-info').append(tempHtml);
+                    }
+                }
+            })
+        }
+    </script>
 </head>
 <body>
   <div class="polaroid">
