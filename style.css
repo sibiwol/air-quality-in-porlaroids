@@ -17,11 +17,6 @@ body {
   background-color: #c4c4c4;
 }
 
-.bg {
-  min-width: 100vw;
-  min-height: 100vh;
-  background-color: rgb(102, 102, 102);
-}
 .Q-Box {
   display: flex;
   justify-content: center;
@@ -36,18 +31,27 @@ body {
   width: 30vw;
   height: 30vh;
   border-radius: 12px;
-  background-color: green;
+  background-color: #ffffff;
+}
+
+select {
+  width: 196px;
+  height: 41px;
+  color: #999;
+  border: none;
+  outline: none;
+  text-align: center;
 }
 
 .polaroid {
   background-color: #ffffff;
   width: 400px;
   height: 600px;
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   margin-left: -200px;
-  margin-top: -300px;
+  margin-top: 100px;
 }
 
 .photo {
