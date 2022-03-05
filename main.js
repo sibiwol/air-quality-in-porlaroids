@@ -6,20 +6,21 @@ const today = document.querySelector('.date')
 const pm10 = document.querySelector('.pm10')
 const pm25 = document.querySelector('.pm25')
 
-// 구 선택하기
-let selectedGu
-function handleOnChange(e) {
-  // 선택된 데이터 가져오기
-  selectedGu = e.value;
-  QBox.style.visibility = "hidden";
-}
-
 // 날짜 가져오기
 let year = new Date().getFullYear()
 let month = new Date().getMonth()
 let date = new Date().getDate()
 
 today.innerHTML=`${year}. ${month + 1}. ${date}`
+
+
+// 구 선택하기
+function handleOnChange() {
+  let select_box = document.querySelector(".select-Box");
+  let selected_index = select_box.selectedIndex
+  let selected_guName = select_box.options[selected_index].value
+  showMiseInfo(selected_guName)
+}
 
 
 // 서울 미세면지 정보 가져오기
@@ -42,20 +43,4 @@ function showMiseInfo(chosedGuName) {
     }
   })
 }
-showMiseInfo("중구")
-// selectedGu와 guName이 같다면 
-
-
-// WGS84 위도, 경도 값 출력 
-// function onGeoOk(position) {
-//   const lat = position.coords.latitude
-//   const long = position.coords.longitude
-//   console.log(lat, long);
-// }
-
-// function onGeoErro() {
-//   alert('위치 정보를 가져올 수 없습니다')
-// }
-
-// navigator.geolocation.getCurrentPosition(onGeoOk, onGeoErro)
 
