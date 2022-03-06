@@ -52,7 +52,17 @@
       </select>
     </div>  
     <div class="polaroid">
-      <div class="photo"></div>
+      <div class="photo">
+        <form method="post" enctype="multipart/form-data">
+          <div class="button">
+              <label for="chooseFile">
+                  👉 사진 선택 👈
+              </label>
+          </div>
+          <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+          <div class="submitButton" id="submitButton">선택 완료</div>
+      </form>
+      </div>
       <div class="description">
         <p class="date"></p>
         <p class="content pm10">미세먼지 </p>

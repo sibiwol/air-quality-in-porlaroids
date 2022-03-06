@@ -11,6 +11,7 @@
 2. npm cheerio axios
 3. 도시의 이름을 가져오기 위해 `구글 클라우드 플랫폼`에서 프로젝트를 만들고 API 키를 만들어야 한다.
 4. 위도/경도 유형은 WG84, X/Y좌표 유형은 UTM-K(GRS80)
+5. 이미지 업로드 하는 방법 [참고 블로그](https://velog.io/@minkyeong-ko/HTMLCSSJS-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%97%85%EB%A1%9C%EB%93%9C-%ED%8C%8C%EC%9D%BC%EC%9D%B4%EB%A6%84-%EB%82%98%ED%83%80%EB%82%B4%EA%B8%B0-%ED%99%94%EB%A9%B4%EC%97%90-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%B3%B4%EC%97%AC%EC%A3%BC%EA%B8%B0)
 
 ## 🤦‍♀️ 삽질기록 ...
 

@@ -58,15 +58,44 @@ select {
   background-color: #c4c4c4;
   width: 320px;
   height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
+/* label 스타일 조정 */
+.button {
+  display: flex;
+  justify-content: center;
+}
+label {
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#chooseFile {
+  visibility: hidden;
+}
+
+.submitButton {
+  width: 30%;
+  margin: auto;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
 .description {
   width: 320px;
   height: 100px;
   left: 40px;
   top: 400px;
   padding: 0 16px;
-  margin: 24px;
+  margin: 0 24px 24px 24px;
 }
 
 .content {

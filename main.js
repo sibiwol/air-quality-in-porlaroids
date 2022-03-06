@@ -44,3 +44,40 @@ function showMiseInfo(chosedGuName) {
   })
 }
 
+let submit = document.getElementById('submitButton');
+submit.onclick = showImage;     //Submit 버튼 클릭시 이미지 보여주기
+
+function showImage() {
+  let newImage = document.querySelector('.photo').lastElementChild;
+  
+  //이미지는 화면에 나타나고
+  newImage.style.visibility = "visible";
+
+  //이미지 업로드 버튼은 숨겨진다
+  document.querySelector('.photo').style.visibility = 'hidden';
+  document.querySelector('form').style.height = '10px'
+}
+
+// 이미지 파일 처리하기
+function loadFile(input) {
+  let file = input.files[0]
+  let newImage = document.createElement("img");
+  newImage.setAttribute("class", 'img');
+
+  newImage.src = URL.createObjectURL(file);   
+
+  newImage.style.width = "320px";
+  newImage.style.height = "320px";
+  newImage.style.visibility = "hidden";   //버튼을 누르기 전까지는 이미지를 숨긴다
+  document.querySelector('.button').style.visibility = 'hidden'
+  document.querySelector('.description').style.margin = '0 24px 24px 24px;'
+
+  newImage.style.objectFit = "scale-down";
+
+  //이미지를 photo div에 추가
+  let showPhoto = document.querySelector('.photo');
+  showPhoto.appendChild(newImage);
+}
+
+
+
