@@ -176,3 +176,8 @@ Fatal: 정방향이 불가능하므로, 중지합니다.
   ### 3.13
 
   - git push 안되는 상황으로 어떻게 해결해야 할지 몰라 브랜치를 하나 더 만들어 거기에 모든 코드를 올려보기로 했다.
+
+  ```
+  // git branch를 github에 올리기 위해서 --set-upstream 옵션을 줘야 한다
+  git push --set-upstream origin develop
+  ```
