@@ -11,6 +11,7 @@
   margin: 0;
   font-family: Gomsin;
   font-size: 24px;
+  list-style: none;
 }
 
 body {
@@ -100,6 +101,12 @@ label {
 
 .content {
   margin: 8px 0;
+}
+
+/* 공유 */
+.sns {
+  background-color: #c4c4c4;
+  /* display: flex; */
 }
 
 .share-icon {

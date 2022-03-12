@@ -79,5 +79,26 @@ function loadFile(input) {
   showPhoto.appendChild(newImage);
 }
 
+// 공유
+function fn_sendFB(sns) {
+  let thisUrl = document.URL;
+  let snsTitle = "오늘의 창공"
+  switch ( sns ) {
+    // case 'kakaoTalk':
+    //   let link = ""
+    //   break
+    case 'twitter':
+      let link = "http://twitter.com/share?url="+encodeURIComponent(thisUrl)+"&text="+encodeURIComponent(snsTitle);
+      window.open(link, "tweetPop", "width=486, height=286,scrollbars=yes")
+      break
+    // case 'instagram':
+    //   let link = ""
+    //   break
+    // case 'url':
+    //   let link = ""
+    //   break
+  }
+}
+
 
 
