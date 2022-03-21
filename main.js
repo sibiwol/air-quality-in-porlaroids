@@ -80,25 +80,41 @@ function loadFile(input) {
 }
 
 // 공유
-function fn_sendFB(sns) {
-  let thisUrl = document.URL;
-  let snsTitle = "오늘의 창공"
-  switch ( sns ) {
-    // case 'kakaoTalk':
-    //   let link = ""
-    //   break
-    case 'twitter':
-      let link = "http://twitter.com/share?url="+encodeURIComponent(thisUrl)+"&text="+encodeURIComponent(snsTitle);
-      window.open(link, "tweetPop", "width=486, height=286,scrollbars=yes")
-      break
-    // case 'instagram':
-    //   let link = ""
-    //   break
-    // case 'url':
-    //   let link = ""
-    //   break
-  }
+// function fn_sendFB(sns) {
+//   let thisUrl = document.URL;
+//   let snsTitle = "오늘의 창공"
+//   switch ( sns ) {
+//     // case 'kakaoTalk':
+//     //   let link = ""
+//     //   break
+//     case 'twitter':
+//       let link = "http://twitter.com/share?url="+encodeURIComponent(thisUrl)+"&text="+encodeURIComponent(snsTitle);
+//       window.open(link, "tweetPop", "width=486, height=286,scrollbars=yes")
+//       break
+//     // case 'instagram':
+//     //   let link = ""
+//     //   break
+//     // case 'url':
+//     //   let link = ""
+//     //   break
+//   }
+// }
+
+// 이미지 jpeg 다운
+const captureBtn = document.querySelector('.share-icon')
+const polaroid = document.querySelector(".section")
+captureBtn.addEventListener('click', () => {
+  html2canvas(polaroid).then(function(canvas){
+		let myImage = canvas.toDataURL("imgae/jpeg", 0.9);
+		downloadURI(myImage, "저장이미지이름.jpeg") 
+	});
+})
+
+function downloadURI(uri, name){
+	let link = document.createElement("a")
+	link.download = name;
+	link.href = uri;
+	document.body.appendChild(link);
+	link.click();
 }
-
-
 
